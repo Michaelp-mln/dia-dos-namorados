@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quer sair comigo no Dia dos Namorados?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: pink;
+            overflow: hidden;
+        }
+        h1 {
+            color: red;
+        }
+        .botao {
+            padding: 15px 30px;
+            font-size: 20px;
+            margin: 20px;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #sim {
+            background-color: red;
+            color: white;
+        }
+        #nao {
+            background-color: gray;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quer sair comigo no Dia dos Namorados? ❤️</h1>
+    <button id="sim" class="botao">Sim!</button>
+    <button id="nao" class="botao">Não...</button>
+
+    <script>
+        document.getElementById("sim").addEventListener("click", function() {
+            alert("Sabia que ia dizer sim! ❤️ Mal posso esperar pelo nosso dia especial!");
+        });
+
+        let mensagens = [
+            "Tem certeza? 😢",
+            "Por favor reconsidera! 😭",
+            "O meu coração está partindo 💔",
+            "Se disser não, o gatinho vão chorar! 🐱🥺",
+            "Aposto que apertou sem querer... certo? 🙃",
+            "Ok... agora já estou nervoso 😳",
+            "Não há fuga, vai ser MINHA! 😈"
+        ];
+        
+        let index = 0;
+
+        document.getElementById("nao").addEventListener("mouseover", function() {
+            let x = Math.random() * window.innerWidth;
+            let y = Math.random() * window.innerHeight;
+            this.style.left = x + "px";
+            this.style.top = y + "px";
+            
+            if (index < mensagens.length) {
+                alert(mensagens[index]);
+                index++;
+            }
+        });
+    </script>
+</body>
+</html>
